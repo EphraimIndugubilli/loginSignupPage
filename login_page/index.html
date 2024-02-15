@@ -34,4 +34,21 @@
         </div>
         
     </div>
+    <script>
+        function handleFormSubmit() {
+            var email = document.querySelector('input[type="email"]').value;
+            var password = document.querySelector('input[type="password"]').value;
+
+            if (email === '' || password === '') {
+                alert('Please enter both email and password');
+                return;
+            }
+
+            console.log('Email:', email);
+            console.log('Password:', password);
+            document.querySelector('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            handleFormSubmit();
+        });
+    </script>
     </body>
